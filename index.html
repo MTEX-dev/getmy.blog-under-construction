@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="getmy.blog — Under Construction. Created by mtex.dev — FREE tools and APIs for developers.">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)">
+  <title>getmy.blog — Under Construction</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: '#7C3AED',
+            accent: '#6EE7B7'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --muted: #94a3b8;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes wave {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .animate-spin-slow {
+      animation: spin 8s linear infinite;
+    }
+
+    .animate-spin-reverse-slow {
+      animation: spin 6s linear infinite reverse;
+    }
+
+    .animate-wave {
+      animation: wave 2s infinite ease-in-out;
+    }
+
+    .segmented button {
+      transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    .segmented [aria-pressed="true"] {
+      background-color: rgba(124, 58, 237, 0.12);
+      color: var(--brand);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 text-slate-800 dark:text-slate-200 antialiased">
+  <div class="max-w-6xl mx-auto px-6 py-16 lg:py-24">
+    <header class="flex items-center justify-between mb-12">
+      <a href="https://mtex.dev" class="inline-flex items-center gap-3 text-sm font-medium no-underline">
+        <img src="https://mtex.dev/images/mtex-logo-no-bg.png" alt="mtex.dev logo" class="h-9 w-9">
+        <span class="sr-only">mtex.dev</span>
+        <span class="hidden sm:inline-block">mtex.dev</span>
+      </a>
+
+      <div class="flex items-center gap-4">
+        <nav class="hidden sm:flex items-center gap-4 text-sm">
+          <a href="https://github.com/mtex-dev/getmy.blog" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-700">
+            <i class="bi bi-github h-5 w-5"></i>
+            <span class="hidden sm:inline">GitHub</span>
+          </a>
+        </nav>
+
+        <div class="segmented p-0.5 bg-transparent rounded-full border border-slate-200 dark:border-slate-700">
+          <div role="radiogroup" aria-label="Theme" class="inline-flex rounded-full overflow-hidden">
+            <button id="theme-system" data-mode="system" aria-pressed="false" class="px-3 py-2 text-xs sm:text-sm flex items-center gap-2">
+              <i class="bi bi-display h-4 w-4"></i>
+              <span class="hidden sm:inline">System</span>
+            </button>
+            <button id="theme-dark" data-mode="dark" aria-pressed="false" class="px-3 py-2 text-xs sm:text-sm flex items-center gap-2">
+              <i class="bi bi-moon-stars h-4 w-4"></i>
+              <span class="hidden sm:inline">Dark</span>
+            </button>
+            <button id="theme-light" data-mode="light" aria-pressed="false" class="px-3 py-2 text-xs sm:text-sm flex items-center gap-2">
+              <i class="bi bi-sun h-4 w-4"></i>
+              <span class="hidden sm:inline">Light</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <section class="max-w-2xl">
+        <p class="inline-flex items-center gap-2 text-sm font-semibold uppercase text-slate-600 dark:text-slate-300 tracking-wider">
+          <i class="bi bi-tools h-4 w-4"></i>
+          Under construction
+        </p>
+
+        <h1 class="mt-6 text-4xl sm:text-5xl font-extrabold tracking-tight">getmy.blog</h1>
+        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">We&rsquo;re building something useful — <strong>FREE tools and APIs</strong> for developers. Brought to you by <a href="https://mtex.dev" class="font-medium underline">mtex.dev</a>.</p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://github.com/mtex-dev/getmy.blog" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-slate-200 dark:border-slate-700 text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-700">View repo</a>
+          <a href="https://mtex.dev" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand text-white text-sm font-medium hover:brightness-95">Visit mtex.dev</a>
+        </div>
+
+        <div class="mt-10 p-6 rounded-lg border border-dashed border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900">
+          <h3 class="text-sm font-semibold">Other projects from mtex.dev</h3>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="bi bi-globe h-5 w-5 mt-1"></i>
+              <div>
+                <a href="https://gimy.site" class="font-medium underline">gimy.site</a>
+                <div class="text-slate-600 dark:text-slate-300 text-xs">FREE STATIC website host — <a href="https://github.com/mtex-dev/gimy-site" class="underline">GitHub</a></div>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <i class="bi bi-person-badge h-5 w-5 mt-1"></i>
+              <div>
+                <a href="https://getmy.name" class="font-medium underline">getmy.name</a>
+                <div class="text-slate-600 dark:text-slate-300 text-xs">FREE Portfolio API — <a href="https://github.com/mtex-dev/getmy.name" class="underline">GitHub</a></div>
+              </div>
+            </li>
+
+            <li class="flex items-start gap-3">
+              <i class="bi bi-code-slash h-5 w-5 mt-1"></i>
+              <div>
+                <a href="https://switchJS.mtex.dev" class="font-medium underline">switchJS</a>
+                <div class="text-slate-600 dark:text-slate-300 text-xs">FREE code-to-JS converter — <a href="https://github.com/switchJS" class="underline">GitHub</a></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mt-8 text-sm text-slate-600 dark:text-slate-300">
+          <p>Follow us for updates:</p>
+          <div class="mt-3 flex items-center gap-3">
+            <a href="https://github.com/mtex-dev" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-medium">
+              <i class="bi bi-github h-5 w-5"></i>
+              <span>mtex-dev on GitHub</span>
+            </a>
+
+            <a href="https://mtex.dev" class="inline-flex items-center gap-2 text-sm font-medium">
+              <i class="bi bi-box h-5 w-5"></i>
+              <span>mtex.dev</span>
+            </a>
+          </div>
+        </div>
+
+        <p class="mt-8 text-xs text-slate-500 dark:text-slate-400">
+          Last updated:
+          <span id="last-updated"></span>
+          • &copy; 2025 mtex.dev
+        </p>
+      </section>
+
+      <aside class="flex items-center justify-center">
+        <div class="w-full max-w-md">
+          <div class="p-8 rounded-2xl bg-gradient-to-b from-slate-50 to-white dark:from-slate-800 dark:to-slate-900 border border-slate-200 dark:border-slate-700">
+            <div class="flex items-center justify-center h-40">
+              <div class="relative w-24 h-24">
+                <div class="absolute inset-0 border-4 border-t-brand border-r-brand border-slate-200 dark:border-slate-700 rounded-full animate-spin"></div>
+                <div class="absolute inset-2 border-4 border-b-accent border-l-accent border-slate-200 dark:border-slate-700 rounded-full animate-spin reverse" style="animation-delay: 0.5s;"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <i class="bi bi-gear-fill text-brand text-4xl animate-wave"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 text-center">
+              <h4 class="font-semibold">Coming soon</h4>
+              <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">We’re polishing the experience. Check back soon or follow the repo for progress.</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <footer class="border-t border-slate-100 dark:border-slate-700 py-6">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="text-xs text-slate-500 dark:text-slate-400">Built by <a href="https://mtex.dev" class="underline">mtex.dev</a> — free tools & APIs for developers.</div>
+      <div class="text-xs text-slate-500 dark:text-slate-400">Source: <a href="https://github.com/mtex-dev/getmy.blog" class="underline">getmy.blog</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const dateElement = document.getElementById('last-updated');
+      const now = new Date();
+      const options = {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      };
+      dateElement.textContent = now.toLocaleDateString('en-US', options);
+
+      const THEME_KEY = 'mtex_theme_pref';
+      const root = document.documentElement;
+      const systemQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const btns = Array.from(document.querySelectorAll('[data-mode]'));
+
+      function setAria(pref) {
+        btns.forEach(b => b.setAttribute('aria-pressed', (b.dataset.mode === pref).toString()));
+      }
+
+      function applyTheme(pref) {
+        if (pref === 'system') {
+          localStorage.removeItem(THEME_KEY);
+          if (systemQuery.matches) root.classList.add('dark');
+          else root.classList.remove('dark');
+        } else if (pref === 'dark') {
+          localStorage.setItem(THEME_KEY, 'dark');
+          root.classList.add('dark');
+        } else {
+          localStorage.setItem(THEME_KEY, 'light');
+          root.classList.remove('dark');
+        }
+        setAria(pref);
+      }
+
+      const stored = localStorage.getItem(THEME_KEY);
+      const initial = stored === 'dark' || stored === 'light' ? stored : 'system';
+      applyTheme(initial);
+
+      systemQuery.addEventListener && systemQuery.addEventListener('change', (e) => {
+        if (!localStorage.getItem(THEME_KEY)) {
+          applyTheme('system');
+        }
+      });
+
+      btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          applyTheme(btn.dataset.mode);
+        });
+      });
+
+      let index = ['system', 'dark', 'light'].indexOf(initial);
+      document.addEventListener('keydown', (e) => {
+        if (['ArrowLeft', 'ArrowRight'].includes(e.key)) {
+          if (e.key === 'ArrowLeft') index = (index + 2) % 3;
+          else index = (index + 1) % 3;
+          applyTheme(['system', 'dark', 'light'][index]);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
